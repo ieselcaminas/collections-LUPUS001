@@ -25,8 +25,8 @@ public class Altura {
         return media/alturaAlumnos.size();
     }
 
-    public static double calcularAlumnosAlturaSuperior(ArrayList<Double> leerAltura, double media){
-        double supMedia = 0;
+    public static int calcularAlumnosAlturaSuperior(ArrayList<Double> leerAltura, double media){
+        int supMedia = 0;
 
         for (int i = 0; i < leerAltura.size(); i++) {
             if (leerAltura.get(i) > media){
@@ -37,13 +37,12 @@ public class Altura {
         return supMedia;
     }
 
-    public static double calcularAlumnosAlturaInferior(ArrayList<Double> leerAltura){
+    public static int calcularAlumnosAlturaInferior(ArrayList<Double> leerAltura){
         double media = calcularMedia(leerAltura);
-        double menMedia = 0;
+        int menMedia = 0;
 
         for (int i = 0; i < leerAltura.size(); i++) {
             if (leerAltura.get(i) < media){
-                //supMedia += leerAltura.get(i);
                 menMedia++;
             }
         }
@@ -52,19 +51,24 @@ public class Altura {
 
     public static void main(String[] args) {
         System.out.println("Introduce el número de alumnos");
-        int numAlumnos = numeroAlumnos();
-        double media;
-        int alumnosSuperior;
-        ArrayList<Double> alturas = new ArrayList<>();
-        System.out.println(numAlumnos);
+        int numAlumnos = numeroAlumnos(); //Pedir el número de alumnos
 
         System.out.println("Introduce las alturas");
-        alturas = leerAltura(alturas, numAlumnos);
+        ArrayList<Double> alturas = new ArrayList<>(); //crear un ArrayList en donde guardar/almacenar las alturas
+        leerAltura(alturas, numAlumnos); //leer las alturas de los alumnos
 
-        media = calcularMedia(alturas);
-        System.out.println("Media: " + media);
+        double media = calcularMedia(alturas); //calcular la altura media
 
-        //alumnosSuperior = calcularAlumnosAlturaSuperior(alturas, media);
+        //Calcular los alumnos con una altura superior e inferior a la media
+        int alumnosSuperior = calcularAlumnosAlturaSuperior(alturas, media);
+        int alumnosInferior = calcularAlumnosAlturaInferior(alturas);
+
+        //Mostrar resultados
+        System.out.println("\nRESULTADOS: ");
+        System.out.println("Número de alumnos: " + numAlumnos);
+        System.out.println("Altura promedio: " + media);
+        System.out.println("Alumnos con altura superior a la media: " + alumnosSuperior);
+        System.out.println("Alumnos con altura inferior a la media: " + alumnosInferior);
 
     }
 }
