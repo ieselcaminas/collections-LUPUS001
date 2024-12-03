@@ -1,18 +1,22 @@
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
 public class Telefonos {
     public static void main(String[] args) {
+        Map<String, String> contacto = new HashMap<>();
         Scanner sc = new Scanner(System.in);
-        int numeroTelefono;
-        Map<String, Integer> telefono = new HashMap<>();
-        telefono.put("Contacto1", 1);
-        telefono.put("Contacto2", 2);
-        telefono.put("Contacto3", 3);
 
-        System.out.println("Añada un nuevo contacto");
-        numeroTelefono = sc.nextInt();
-        
+        contacto.put("Aaron","754456534");
+        contacto.put("Alejandro", "+34 64354373");
+        contacto.put("Morales", "+34 6756657");
+
+        System.out.println("Pon el contacto para averiguar sus teléfonos");
+        String nombre = sc.nextLine();
+
+        if (contacto.containsKey(nombre)) {
+            System.out.println("El teléfono de " + nombre + " es: " + contacto.get(nombre));
+        } else {
+            System.out.println("El contacto " + nombre + " no existe");
+        }
+        sc.close();
     }
 }
