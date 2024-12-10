@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class MejorTerminacion {
+public class Sorteo {
     public static void main(String[] args) {
         System.out.println(terminaciones(new String[]{"03843", "45344", "35434", "64545"}));
 
@@ -55,5 +55,9 @@ public class MejorTerminacion {
         //HashMap mejor = new HashMap();
 
 
-    }*/
+    }
+
+    */
+
+
 }
