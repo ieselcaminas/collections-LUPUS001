@@ -4,8 +4,6 @@ public class Botin {
     public static void main(String[] args) {
         Map<Integer, String> reparto = botin(2, new String[]{"10", "20", "100", "50", "200"});
         System.out.println(reparto.toString());
-        String[] billetes = {"10", "20", "10", "50", "100", "200", "500", "100"};
-
     }
     public static Map<Integer, String> botin(int ladronesCant, String[] billetes){
         Map<Integer, String> repartir = new HashMap<>();
