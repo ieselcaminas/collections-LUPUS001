@@ -3,7 +3,7 @@ import java.util.Stack;
 public class ExpresionesAritmeticas {
     public static void main(String[] args) {
         //System.out.println(aritmetica(12, 2));
-        String cadena = "50 2 4 * 4 +";
+        String cadena = "50 4 * 4 +";
         System.out.println(calculo(cadena));
     }
 
