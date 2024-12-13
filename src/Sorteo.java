@@ -28,20 +28,19 @@ public class Sorteo {
         desglosado veremos que [boleto.length() - 1] calcula la posición del último carácter del boleto.
         REPASO: Ya que el boleto.length de "03843" sacará que tiene una longitud de 5 y le restamos - 1 para no salirnos del rango (5 - 1 = 4) | Pos 0: 0, Pos 1: 3, Pos 2: 8, Pos 3: 4, Pos 4: 3 El que está en la posición 4 es 3, así que este es el digito que guardamos
         [boleto.charAt] para poder obtener el carácter en la posición que hemos sacado del length. En esta caso, obtener el carácter en la posición 4
-
-        ultimo = boleto.charAt(posición 4) = 3
-        ultimo = 3
+        EJ:     ultimo = boleto.charAt(posición 4) = 3
+                ultimo = 3
 
         EJ2:
         Si boleto = "00004", entonces:
-
         boleto.length() es 5.
         boleto.charAt(4) devuelve '4'.
         Por lo tanto, ultimo tendrá el valor '4'.
         */
         //Al identificar la terminación de cada boleto, sacaremos la clave que usaremos para actualizar el Map "terminacion"
 
-        //declaramos Integer asi y no (int) ya que como este metodo es Map, se cambia la forma de declararlo
+
+        // Declaramos Integer así y no `int` porque el método Map.get devuelve un objeto de tipo Integer y si  int, habría un error de tipo.
         Integer cont;
         /*esta variable [cont = terminacion.get(ultimo);] almacena temporalmente el valor de la clave "ultimo" del mapa "terminacion"
          terminacion.get(ultimo) busca en el mapa si ya existe una entrada {3 = 1} con el valor de la clave ultimo
