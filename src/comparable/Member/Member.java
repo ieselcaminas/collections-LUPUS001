@@ -1,4 +1,4 @@
-package comparable;
+package comparable.Member;
 
 public class Member implements Comparable<Member> {
     private String name;
