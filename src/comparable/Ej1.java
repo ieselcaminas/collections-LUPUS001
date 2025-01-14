@@ -12,7 +12,7 @@ public class Ej1 {
         //Arrays.stream(numeros).forEach(System.out::println);
 
         List<Person> personas = new ArrayList<>();
-        Person p = new Person("Juan", "García", 1999);
+        Person p = new Person("David", "Martinez", 1999);
         personas.add(p);
         p = new Person("Maria", "Martinez", 2006);
         personas.add(p);

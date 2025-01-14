@@ -1,35 +1,37 @@
 package comparable;
 
-public class Human {
+public class Human implements Comparable<Human>{
     private String name;
-    private int salario;
+    private double salario;
 
-    public Human(String name, int salario){
+    public Human(String name, double salario){
         this.name  = name;
         this.salario = salario;
     }
 
     public String getName(){
-        return this.name;
+        return name;
+    }
+    public double getSalario() {
+        return salario;
     }
 
-    public int getSalario() {
-        return this.salario;
+    public void setName(String name) {
+        this.name = name;
+    }
+    public void setSalario(double salario) {
+        this.salario = salario;
     }
 
     @Override
     public String toString(){
-        return this.getName() + " (" + this.getSalario() + ")";
+        return this.name + " - " + this.salario;
     }
 
+    //si no ponemos Human implements Comparable<Human> el @Override dará error, para que el método compareTo(Human other) funcione
+    //la clase debe implementar la mencionada Comparable<Human>
     @Override
-    public int compareTo(Human human) {
-        if (this.salario == human.getSalario()) {
-            return 0;
-        } else if (this.salario == human.getSalario()) {
-            return 1;
-        } else {
-            return -1;
-        }
+    public int compareTo(Human other) {
+        return Double.compare(this.getSalario(), other.getSalario());
     }
 }
