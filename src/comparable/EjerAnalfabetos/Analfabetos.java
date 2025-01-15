@@ -8,7 +8,7 @@ import java.util.List;
 
 public class Analfabetos {
     public static void main(String[] args) throws IOException {
-        BufferedReader rd = new BufferedReader(new FileReader("files/illiterate.csv"));
+        BufferedReader rd = new BufferedReader(new FileReader("src/files/illiterate.csv"));
         List<Pais> paises = new ArrayList<>();
         Pais pais;
         String [] datos;

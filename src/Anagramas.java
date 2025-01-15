@@ -9,7 +9,7 @@ public class Anagramas {
         hecho de compartir 1 letra ya entrarian en el mismo grupo de anagramas y entonces este programa no  tendría sentido*/
 
         //abrimos el archivo spanish-dict gracias al BufferedReader
-        BufferedReader lector = new BufferedReader(new FileReader("files/spanish-dict.txt"));
+        BufferedReader lector = new BufferedReader(new FileReader("src/files/spanish-dict.txt"));
         String line;
         Map<String,List<String>> anagramas = new HashMap<>();
         /*La clave String será la versión ordenada alfabéticamente de las palabras dadas
