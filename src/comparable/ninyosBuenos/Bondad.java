@@ -1,4 +1,4 @@
-package comparable.NinyosBuenos;
+package comparable.ninyosBuenos;
 
 import java.util.ArrayList;
 import java.util.List;

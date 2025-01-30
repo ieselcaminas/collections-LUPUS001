@@ -1,4 +1,4 @@
-package comparable.Felipe;
+package comparable.felipe;
 
 import java.util.ArrayList;
 import java.util.List;

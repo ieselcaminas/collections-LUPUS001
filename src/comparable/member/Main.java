@@ -1,4 +1,4 @@
-package comparable.Member;
+package comparable.member;
 
 import java.util.ArrayList;
 import java.util.List;

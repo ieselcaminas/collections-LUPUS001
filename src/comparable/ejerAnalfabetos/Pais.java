@@ -1,4 +1,4 @@
-package comparable.EjerAnalfabetos;
+package comparable.ejerAnalfabetos;
 
 public class Pais implements Comparable<Pais> {
     private String nombre;

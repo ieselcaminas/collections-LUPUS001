@@ -1,4 +1,4 @@
-package comparable.NinyosBuenos;
+package comparable.ninyosBuenos;
 
 public class Ninyo implements Comparable<Ninyo>{
     private int bondad;

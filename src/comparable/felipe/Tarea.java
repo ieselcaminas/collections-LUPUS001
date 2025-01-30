@@ -1,4 +1,4 @@
-package comparable.Felipe;
+package comparable.felipe;
 
 public class Tarea implements Comparable<Tarea>{
     private int prioridad;

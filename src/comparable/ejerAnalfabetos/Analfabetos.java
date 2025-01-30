@@ -1,4 +1,4 @@
-package comparable.EjerAnalfabetos;
+package comparable.ejerAnalfabetos;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
