@@ -1,11 +1,15 @@
 import java.util.Stack;
 
+//push: Inserta un elemento en la parte superior de la pila.
+//pop: Elimina y devuelve el elemento en la parte superior de la pila.
+
 public class ExpresionesAritmeticas {
     public static void main(String[] args) {
-        System.out.println(calculo("5 5 + 3 * 2 /"));
+        System.out.println(calculo("6 4 + 3 * 2 /"));
     }
     public static boolean esNumero(String cadena){
         return Character.isDigit(cadena.charAt(0));
+        //verificamos que sea un número comprobando que el primer carácter es un dígito
     }
     public static int calculo(String expresion){
         String terminos[] = expresion.split(" ");
@@ -26,12 +30,12 @@ public class ExpresionesAritmeticas {
         */
 
         for (int i = 0; i < terminos.length; i++) {
-            if (esNumero(terminos[i])){
-                numero = Integer.valueOf(terminos[i]);
-                pila.push(numero);
+            if (esNumero(terminos[i])){//En caso de que cada carácter de 'terminos' sea un número
+                numero = Integer.valueOf(terminos[i]);//convertimos estos carácteres en enteros y los guardamos en la variable 'numero'
+                pila.push(numero);//lo apilamos
             } else{
-                n2 = pila.pop();
-                n1 = pila.pop();
+                n2 = pila.pop();//guarda/desapila el último número que se ha apilado '4'
+                n1 = pila.pop();//guarda/desapila el penúltimo número que se ha apilado '6'
                 if (terminos[i].equals("+")){
                     pila.push(n2 + n1);
                 } else if(terminos[i].equals("-")){
@@ -44,5 +48,7 @@ public class ExpresionesAritmeticas {
             }
         }
         return pila.pop();
+        //una vez hemos vaciado la pila, comprobado y calculado en caso necesario todos los caracteres, 
+        // devolvemos el resultado con este pop
     }
 }
